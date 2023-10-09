@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Pencatat Kegiatan</h1>
+
+  <app-todo-form [editTodo]="selectedTodo"></app-todo-form>
+  <hr />
+
+  <app-todo-item
+    (onItemClick)="onItemClick($event, i)"
+    *ngFor="let item of items; let i = index"
+    [item]="item"
+  ></app-todo-item>
+</div>
